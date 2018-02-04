@@ -17,7 +17,7 @@
 	width: 350px;
 	display: block;
 	margin: 0 auto;
-	margin-top: -30px;
+	margin-top: 40px;
 }
 
 #banner1 {
@@ -27,11 +27,6 @@
 	background-position: center;
     background-attachment: fixed;
     width: 100%;
-}
-
-#banner-filter1 {
-	height: 300px;
-	background-color: #66309680;
 }
 
 #info {
@@ -50,17 +45,17 @@
 
 #info-content h1 {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 5px;
 	font-weight: 300;
 }
 
 #info-content p {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 #producten {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 50px;
 }
 
@@ -83,6 +78,14 @@
     display: inline-block;
     margin: 1%;
     width: 30%;
+}
+
+#product-info img {
+    transition: 1s;
+}
+
+#product-info img:hover {
+    transform: scale(1.2);
 }
 
 .container {
@@ -111,6 +114,28 @@
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%)
 }
+
+#allproducts {
+    display: flex;
+    margin: 0 auto;
+    width: 60%;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+
+#product-foto img {
+    width: 350px;
+}
+
+#product-beschrijving {
+    width: 350px;
+    display: block;
+    margin: 0 auto;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 
 .container:hover .image {
     opacity: 0.3;
@@ -202,28 +227,33 @@ input[type=submit]:hover {
 }
 
 .product-info {
-    width: 80%;
+    width: 100%;
     display: block;
     margin: 0 auto;
     
 }
 
 footer {
-    height: 200px;
+    height: 150px;
     background-color: #333;
 }
 
 #footer-content {
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     display: block;
     color: white;
-    padding-top: 50px;
+    padding-top: 30px;
+}
+
+table {
+    width: 100%;
 }
 
 @media screen and (max-width: 650px) {
     #contact-content {
         width: 80%;
+
     }
     
     .product {
@@ -240,7 +270,28 @@ footer {
         margin-top: 10px;
     }
     
-    p {
-        color: black;
+    #allproducts {
+        width: 80%;
+        display: block;
+        margin-bottom: 100px;
     }
+    
+    #product-foto img {
+        width: 200px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    
+    #product-foto img {
+        width: 300px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    
 }

@@ -3,48 +3,31 @@
 <head>
 				<meta charset="utf-8">
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<title></title>
+				<title>Holland Magic Studio</title>
+				<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 				<link rel="stylesheet" href="main.css">
 				<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-				<script>
-
-                        $(document).ready(function(){
-                          $("a").on('click', function(event) {
-                            if (this.hash !== "") {
-                              event.preventDefault();
-                              var hash = this.hash;
-                              $('html, body').animate({
-                                scrollTop: $(hash).offset().top
-                              }, 500, function(){
-                                window.location.hash = hash;
-                              });
-                            }
-                          });
-                        });
-
-                </script>
 </head>
 
 <body>
 				<div id="header-logo">					
-                    <a href="index.php"><img id="logo" src="Images/HollandSF.png" alt="logo"></a>
+                    <a href="index.php"><img id="logo" src="Images/HMSLogo.png" alt="logo"></a>
 				</div>
 	
 				<div id="banner1">
-					<div id="banner-filter1">
-                        <div id="info-content">
-                            <p style="font-size: 20px; color: white; text-align: center;">
-                                Welkom bij Holland Magic Studio.<br>
-                                We bedenken en bouwen magische producten van hoge kwaliteit.
-                                Waar klassieke magie terugkomt met de techniek van vandaag. 
-                                Holland Magic Studio,    
-                                kwaliteit magie uit Nederland!
-
-                            </p>
-                        </div>
-					</div>
+                        
+                        
 				</div>
-				
+				<div id="info-content">
+				    <p style="font-size: 20px; color: black; text-align: center;">
+                        Welkom bij Holland Magic Studio.<br>
+                        We bedenken en bouwen magische producten van hoge kwaliteit.
+                        Waar klassieke magie terugkomt met de techniek van vandaag. 
+                        Holland Magic Studio,    
+                        kwaliteit magie uit Nederland!
+
+                    </p>    
+				</div>
 				<div id="producten">
 				<div class="content">
                      <h1>Producten</h1><br>
@@ -75,6 +58,8 @@
                           </div></a>
                      </div>
                     </div>
+                    
+			    <p style="float: left; text-decoration: none; color: black; margin-top: 20px;"><a style="color: black;" href="allproducts.html">Alle producten</a></p>
 			    </div>
 			    </div>
 			    
@@ -82,52 +67,47 @@
 			        <h1>Contact</h1>
 			        <div id="contact-content">
 			            <div id="contact-form">
-			                <?php
-                                $action= $_REQUEST['action'];
-                                if ($action=="")
-                                    {
-                                    ?>
-                                    <form  action="" method="POST" enctype="multipart/form-data">
-                                    <input type="hidden" name="action" value="submit">
-                                    Naam:<br>
-                                    <input name="name" type="text" value="" size="30"/><br>
-                                    Email:<br>
-                                    <input name="email" type="text" value="" size="30"/><br>
-                                    Bericht:<br>
-                                    <textarea name="message" rows="7" cols="30"></textarea><br>
-                                    <input type="submit" value="Verzenden"/>
-                                    </form>
-                                    <?php
-                                    } 
-                                else
-                                    {
-                                    $name=$_REQUEST['name'];
-                                    $email=$_REQUEST['email'];
-                                    $message=$_REQUEST['message'];
-                                    if (($name=="")||($email=="")||($message==""))
-                                        {
-                                        echo "All fields are required, please fill <a href=\"\">the form</a> again.";
-                                        }
-                                    else{		
-                                        $from="From: $name<$email>\r\nReturn-path: $email";
-                                        $subject="Vraag over Holland Magic Studio";
-                                        mail("21897@ma-web.nl", $subject, $message, $from);
-                                        echo "<p text-align: center;>Email verzonden!</p>";
-                                        }
-                                    }  
-                            ?>
-			            </div>
+			                 <form name="contactform" method="post" action="send_form_email.php">
+
+<tr>
+ <td>
+  <label>Naam:</label>
+ </td>
+ <td>
+  <input style="width: 100%;" type="text" name="name" maxlength="50" size="30">
+ </td>
+</tr>
+<tr>
+ <td>
+  <label>Email:</label><br>
+ </td>
+ <td>
+  <input style="width: 100%;"  type="text" name="email" maxlength="80" size="30">
+ </td>
+</tr>
+<tr>
+ <td>
+  <label>Bericht:</label><br>
+ </td>
+ <td>
+  <textarea  style="width: 100%;"  name="message" maxlength="1000" cols="25" rows="6"></textarea>
+ </td>
+</tr>
+<tr>
+ <td style="text-align:center">
+  <input type="submit" value="Verstuur">
+ </td>
+</tr>
+
+</form>
+                        </div>
 			         </div>
                 </div>
                 
                 <footer>
                     <div id="footer-content">
-                        <p style="float: left;">Made by Mento ®</p><br>
-                        <p id="adres" style="float: right;">Holland Magic Studio<br>
-                                                IJdoornlaan 58 L2<br>
-                                                1024KV<br>
-                                                Amsterdam<br>
-                                                Netherlands</p>
+                      <p>Made by <a target="_blank" style="text-decoration: none; color: lightgray; " href="http://21296.nl/Mento/">Mento</a>®</p><br>
+                      <p>Holland Magic Studio<br>Ijdoornlaan 58L2, 1024KV Amsterdam</p>
                     </div>
                 </footer>
                 

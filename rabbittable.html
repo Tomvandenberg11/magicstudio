@@ -3,38 +3,20 @@
 <head>
 				<meta charset="utf-8">
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
-				<title></title>
+				<title>Holland Magic Studio | Rabbit Table</title>
+				<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 				<link rel="stylesheet" href="main.css">
 				<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-				<script>
-					$(document).ready(function(){
-					  $("a").on('click', function(event) {
-
-						if (this.hash !== "") {
-						  event.preventDefault();
-
-						  var hash = this.hash;
-
-						  $('html, body').animate({
-							scrollTop: $(hash).offset().top
-						  }, 800, function(){
-
-							window.location.hash = hash;
-						  });
-						}
-					  });
-					});
-				</script>
 </head>
 
 <body>
 				<div id="header-logo">					
-                    <a href="index.php"><img id="logo" src="Images/HollandSF.png" alt="logo"></a>
+                    <a href="index.php"><img id="logo" src="Images/HMSLogo.png" alt="logo"></a>
 				</div>
 				
-				<div id="info">
+				<div style="margin-top: -50px;" id="info">
                     <div id="info-content">
-				        <h1>Rabbit Table Deluxe by Holland Magic</h1>
+				        <h1>Rabbit Table Deluxe</h1>
 				        <div style="margin-top: 30px; text-align: center;" class="product-info">
 				            <img style="display: block; width: 60%; margin: 0 auto;" src="Images/FB_IMG_1507911259196.jpg">
 				        </div><br><br>
@@ -43,23 +25,22 @@
 Deze mooie en stabiele konijnentafel met de afbeelding van een konijn in een hoge hoed is helemaal uit elkaar te nemen (in 4 delen) en te transporteren in een stevige transportzak welke waterafstotend is.
 Afmeting in elkaar gezet (ca. 1 minuut om in elkaar te zetten) 78 cm hoog, het blad meet 41 x 31 cm. Verpakt in de transportzak meet deze 55 x 40 x 15 cm. Met de hand geschilderd en gemaakt in degelijke kwaliteit!
 				        </p>
-				        <form style="text-align: center; margin: 30px;" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                            <input type="hidden" name="cmd" value="_xclick">
-                            <input type="hidden" name="business" value="21296@ma-web.nl">
-                            <input type="hidden" name="lc" value="NL">
-                            <input type="hidden" name="item_name" value="Konijnentafel">
-                            <input type="hidden" name="amount" value="199.00">
-                            <input type="hidden" name="currency_code" value="EUR">
-                            <input type="hidden" name="button_subtype" value="services">
-                            <input type="hidden" name="no_note" value="0">
-                            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
-                            <input type="image" src="https://www.paypalobjects.com/nl_NL/NL/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal, de veilige en complete manier van online betalen.">
-                            <img alt="" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
+				        <form style="cursor: pointer; text-align: center; margin: 0 auto; display: block;" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="hosted_button_id" value="RNSLB7YERS6GC">
+                            <input type="image" src="https://www.paypalobjects.com/nl_NL/NL/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal, de veilige en complete manier van online betalen.">
+                            <img style="margin-top: 75px;" border="0" src="https://www.paypalobjects.com/nl_NL/i/scr/pixel.gif" width="1" height="1">
                         </form>
 
 				    </div>
 				</div>
 				
 				
+                <footer>
+                    <div id="footer-content">
+                      <p>Made by <a target="_blank" style="text-decoration: none; color: lightgray; " href="http://21296.nl/Mento/">Mento</a>®</p><br>
+                      <p>Holland Magic Studio<br>Ijdoornlaan 58L2, 1024KV Amsterdam</p>
+                    </div>
+                </footer>
 </body>
 </html>
